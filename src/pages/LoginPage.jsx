@@ -32,11 +32,11 @@ export default function LoginPage() {
       </div>
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5 rounded-md border border-slate-200 p-6">
         <label className="flex flex-col gap-2 text-sm font-bold text-ink">
-          Email
+          E-posta
           <input
             {...register("email", {
-              required: "Email zorunlu.",
-              pattern: { value: /^\S+@\S+\.\S+$/, message: "Geçerli email girin." },
+              required: "E-posta zorunlu.",
+              pattern: { value: /^\S+@\S+\.\S+$/, message: "Geçerli e-posta girin." },
             })}
             className="h-11 rounded-md border border-slate-300 px-4 text-sm outline-none focus:border-brand"
           />

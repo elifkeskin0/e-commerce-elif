@@ -53,7 +53,7 @@ export const fetchRoles = () => async (dispatch, getState) => {
 export const signupUser = (payload, history, fallback = "/") => async () => {
   try {
     await api.post("/signup", payload);
-    toast.warn("You need to click link in email to activate your account!");
+    toast.warn("Hesabınızı aktifleştirmek için e-postadaki bağlantıya tıklamalısınız!");
     history.push(fallback);
   } catch (error) {
     toast.error(error?.response?.data?.message || "Kayıt işlemi başarısız.");

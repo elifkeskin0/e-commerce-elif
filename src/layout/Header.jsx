@@ -6,11 +6,11 @@ import { fetchCategories, logoutUser } from "../store/actions.js";
 import { currency, getCategoryGender, getCategoryName, gravatarUrl } from "../utils/format.js";
 
 const navItems = [
-  { to: "/", label: "Home", exact: true },
-  { to: "/shop", label: "Shop" },
-  { to: "/about", label: "About" },
-  { to: "/team", label: "Team" },
-  { to: "/contact", label: "Contact" },
+  { to: "/", label: "Ana Sayfa", exact: true },
+  { to: "/shop", label: "Mağaza" },
+  { to: "/about", label: "Hakkımızda" },
+  { to: "/team", label: "Ekip" },
+  { to: "/contact", label: "İletişim" },
 ];
 
 export default function Header() {
@@ -33,7 +33,7 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white">
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
         <Link to="/" className="text-xl font-bold text-ink">
-          Elif Commerce
+          Elif Ticaret
         </Link>
 
         <nav className="hidden items-center gap-7 text-sm font-bold text-muted md:flex">
@@ -54,7 +54,7 @@ export default function Header() {
               onClick={() => setShopOpen((value) => !value)}
               className="flex items-center gap-1 hover:text-brand"
             >
-              Categories
+              Kategoriler
               <ChevronDown className="h-4 w-4" />
             </button>
             {shopOpen && (
@@ -110,7 +110,7 @@ export default function Header() {
               className="hidden items-center gap-2 text-sm font-bold text-brand md:flex"
             >
               <User className="h-4 w-4" />
-              Login
+              Giriş
             </Link>
           )}
 
@@ -169,6 +169,7 @@ export default function Header() {
             type="button"
             onClick={() => setMenuOpen((value) => !value)}
             className="rounded-md p-2 text-ink hover:bg-slate-100 md:hidden"
+            aria-label="Menüyü aç veya kapat"
           >
             {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -197,11 +198,11 @@ export default function Header() {
               }}
               className="text-left text-danger"
             >
-              Logout
+              Çıkış Yap
             </button>
           ) : (
             <Link to="/login" onClick={() => setMenuOpen(false)} className="text-brand">
-              Login
+              Giriş Yap
             </Link>
           )}
         </div>

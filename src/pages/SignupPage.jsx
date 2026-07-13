@@ -69,11 +69,11 @@ export default function SignupPage() {
             className="h-11 rounded-md border border-slate-300 px-4 text-sm outline-none focus:border-brand"
           />
         </Field>
-        <Field label="Email" error={errors.email?.message}>
+        <Field label="E-posta" error={errors.email?.message}>
           <input
             {...register("email", {
-              required: "Email zorunlu.",
-              pattern: { value: /^\S+@\S+\.\S+$/, message: "Geçerli email girin." },
+              required: "E-posta zorunlu.",
+              pattern: { value: /^\S+@\S+\.\S+$/, message: "Geçerli e-posta girin." },
             })}
             className="h-11 rounded-md border border-slate-300 px-4 text-sm outline-none focus:border-brand"
           />

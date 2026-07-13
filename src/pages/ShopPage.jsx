@@ -49,7 +49,7 @@ export default function ShopPage() {
     <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-10">
       <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
         <div className="flex flex-col gap-2">
-          <span className="text-sm font-bold text-muted">Shop</span>
+          <span className="text-sm font-bold text-muted">Mağaza</span>
           <h1 className="text-3xl font-bold text-ink">Ürünleri Keşfet</h1>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">

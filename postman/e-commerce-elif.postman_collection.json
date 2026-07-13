@@ -1,0 +1,147 @@
+{
+  "info": {
+    "name": "e-commerce-elif",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://workintech-fe-ecommerce.onrender.com"
+    },
+    {
+      "key": "token",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "Roles",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/roles"
+      }
+    },
+    {
+      "name": "Signup",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Test User\",\n  \"email\": \"test@example.com\",\n  \"password\": \"Test123!\",\n  \"role_id\": 3\n}"
+        },
+        "url": "{{baseUrl}}/signup"
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"customer@commerce.com\",\n  \"password\": \"123456\"\n}"
+        },
+        "url": "{{baseUrl}}/login"
+      }
+    },
+    {
+      "name": "Verify",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "{{token}}" }],
+        "url": "{{baseUrl}}/verify"
+      }
+    },
+    {
+      "name": "Categories",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/categories"
+      }
+    },
+    {
+      "name": "Products",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/products?limit=25&offset=0"
+      }
+    },
+    {
+      "name": "Product Detail",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/products/1"
+      }
+    },
+    {
+      "name": "Address List",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "{{token}}" }],
+        "url": "{{baseUrl}}/user/address"
+      }
+    },
+    {
+      "name": "Create Address",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "{{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"ev adresi\",\n  \"name\": \"Elif\",\n  \"surname\": \"Test\",\n  \"phone\": \"05376845834\",\n  \"city\": \"istanbul\",\n  \"district\": \"kadikoy\",\n  \"neighborhood\": \"adres detaylari\"\n}"
+        },
+        "url": "{{baseUrl}}/user/address"
+      }
+    },
+    {
+      "name": "Card List",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "{{token}}" }],
+        "url": "{{baseUrl}}/user/card"
+      }
+    },
+    {
+      "name": "Create Card",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "{{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"card_no\": \"1234123412341234\",\n  \"expire_month\": 12,\n  \"expire_year\": 2027,\n  \"name_on_card\": \"Elif Test\"\n}"
+        },
+        "url": "{{baseUrl}}/user/card"
+      }
+    },
+    {
+      "name": "Create Order",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "{{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"address_id\": 1,\n  \"order_date\": \"2024-01-10T14:18:30\",\n  \"card_no\": 1234123412341234,\n  \"card_name\": \"Elif Test\",\n  \"card_expire_month\": 12,\n  \"card_expire_year\": 2027,\n  \"card_ccv\": 321,\n  \"price\": 100,\n  \"products\": [{ \"product_id\": 1, \"count\": 1, \"detail\": \"test\" }]\n}"
+        },
+        "url": "{{baseUrl}}/order"
+      }
+    },
+    {
+      "name": "Orders",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "{{token}}" }],
+        "url": "{{baseUrl}}/order"
+      }
+    }
+  ]
+}

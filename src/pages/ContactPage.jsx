@@ -12,7 +12,7 @@ export default function ContactPage() {
       </div>
       <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
         {[
-          { icon: Mail, title: "Email", text: "support@elifcommerce.com" },
+          { icon: Mail, title: "E-posta", text: "support@elifticaret.com" },
           { icon: Phone, title: "Telefon", text: "+90 555 000 00 00" },
           { icon: MapPin, title: "Adres", text: "İstanbul, Türkiye" },
         ].map((item) => (
@@ -25,7 +25,7 @@ export default function ContactPage() {
       </div>
       <form className="mx-auto flex w-full max-w-2xl flex-col gap-4 rounded-md border border-slate-200 p-6">
         <input placeholder="Ad Soyad" className="h-11 rounded-md border border-slate-300 px-4 text-sm outline-none focus:border-brand" />
-        <input placeholder="Email" className="h-11 rounded-md border border-slate-300 px-4 text-sm outline-none focus:border-brand" />
+        <input placeholder="E-posta" className="h-11 rounded-md border border-slate-300 px-4 text-sm outline-none focus:border-brand" />
         <textarea placeholder="Mesajınız" rows="5" className="rounded-md border border-slate-300 p-4 text-sm outline-none focus:border-brand" />
         <button type="button" className="h-11 rounded-md bg-brand text-sm font-bold text-white hover:bg-ink">
           Gönder

@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { ArrowRight } from "lucide-react";
 import ProductCard from "../components/ProductCard.jsx";
+import Slider from "../components/Slider.jsx";
 import Spinner from "../components/Spinner.jsx";
 import { addToCart, fetchCategories, fetchProducts } from "../store/actions.js";
 import { getCategoryGender, getCategoryName } from "../utils/format.js";
@@ -20,33 +20,7 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col">
-      <section className="bg-[#EAF6FF]">
-        <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 md:flex-row md:items-center md:py-16">
-          <div className="flex flex-1 flex-col gap-6">
-            <span className="text-sm font-bold uppercase text-brand">Yeni sezon</span>
-            <h1 className="max-w-xl text-4xl font-bold leading-tight text-ink md:text-6xl">
-              Elif Commerce
-            </h1>
-            <p className="max-w-lg text-base leading-7 text-muted">
-              Moda, ev ve yaşam ürünlerini hızlı filtreleme, güvenli sepet ve akıcı sipariş deneyimiyle keşfet.
-            </p>
-            <Link
-              to="/shop"
-              className="flex h-12 w-fit items-center gap-2 rounded-md bg-brand px-7 text-sm font-bold text-white hover:bg-ink"
-            >
-              Alışverişe Başla
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-          <div className="flex flex-1 justify-center">
-            <img
-              src="https://cdn.dsmcdn.com/ty181/product/media/images/20210923/14/135755138/57457659/1/1_org_zoom.jpg"
-              alt="Elif Commerce vitrin ürünü"
-              className="max-h-[460px] w-full max-w-sm rounded-md object-cover shadow-2xl"
-            />
-          </div>
-        </div>
-      </section>
+      <Slider />
 
       <section className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12">
         <div className="flex flex-col gap-2 text-center">
