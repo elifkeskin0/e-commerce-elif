@@ -33,7 +33,7 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white">
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
         <Link to="/" className="text-xl font-bold text-ink">
-          Elif Ticaret
+          Elif Commerce
         </Link>
 
         <nav className="hidden items-center gap-7 text-sm font-bold text-muted md:flex">

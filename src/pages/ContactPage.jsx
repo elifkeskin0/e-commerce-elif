@@ -12,7 +12,7 @@ export default function ContactPage() {
       </div>
       <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
         {[
-          { icon: Mail, title: "E-posta", text: "support@elifticaret.com" },
+          { icon: Mail, title: "E-posta", text: "support@elifcommerce.com" },
           { icon: Phone, title: "Telefon", text: "+90 555 000 00 00" },
           { icon: MapPin, title: "Adres", text: "İstanbul, Türkiye" },
         ].map((item) => (
