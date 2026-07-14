@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   {
-    title: "Elif Commerce",
+    title: "Elif Ticaret",
     label: "Yeni sezon",
     text: "Moda, ev ve yaşam ürünlerini hızlı filtreleme, güvenli sepet ve akıcı sipariş deneyimiyle keşfet.",
     image: "https://cdn.dsmcdn.com/ty181/product/media/images/20210923/14/135755138/57457659/1/1_org_zoom.jpg",

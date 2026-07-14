@@ -7,7 +7,7 @@ export default function AboutPage() {
         <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 md:flex-row md:items-center">
           <div className="flex flex-1 flex-col gap-4">
             <span className="text-sm font-bold text-muted">Hakkımızda</span>
-            <h1 className="text-3xl font-bold leading-tight text-ink md:text-5xl">Elif Commerce alışverişi sadeleştirir.</h1>
+            <h1 className="text-3xl font-bold leading-tight text-ink md:text-5xl">Elif Ticaret alışverişi sadeleştirir.</h1>
             <p className="text-sm leading-7 text-muted">
               Bu proje Workintech e-commerce görevleri için React, Redux, Thunk, Router v5, Tailwind ve canlı API entegrasyonuyla geliştirilen modern bir alışveriş uygulamasıdır.
             </p>
